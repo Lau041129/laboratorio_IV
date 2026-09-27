@@ -50,7 +50,7 @@ alerta = alerta_voltaje_bajo | alerta_senal_baja | alerta_temperatura_alta | ale
 cant_alerta_cualquiera = np.sum(alerta)
 print(f"Registros con al menos una alerta: {cant_alerta_cualquiera}")
 
-# Guardamos la alerta en el DataFrame para usarla en los gráficos y resúmenes
+# Guardamos la alerta en el DataFrame
 df['alerta'] = alerta
 
 # 4. Evolución Temporal y Detección de Alertas con Matplotlib
@@ -94,3 +94,5 @@ resumen_diario = df.groupby(df.index.date).agg(
 )
 
 print(resumen_diario.head())
+
+
